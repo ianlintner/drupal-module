@@ -1,0 +1,58 @@
+name = Drupal developer
+description = Install developer modules and configure the site to make module development easier.
+
+core = 7.x
+
+; Core modules (standard)
+dependencies[] = block
+dependencies[] = color
+dependencies[] = comment
+dependencies[] = contextual
+dependencies[] = dashboard
+dependencies[] = help
+dependencies[] = image
+dependencies[] = list
+dependencies[] = menu
+dependencies[] = number
+dependencies[] = options
+dependencies[] = path
+dependencies[] = taxonomy
+dependencies[] = dblog
+dependencies[] = search
+dependencies[] = overlay
+dependencies[] = field_ui
+dependencies[] = file
+dependencies[] = rdf
+
+; Developer modules
+dependencies[] = devel
+dependencies[] = devel_generate
+
+; Coder and submodules
+dependencies[] = coder
+dependencies[] = coder_review
+dependencies[] = coder_upgrade
+
+; Admin Menu
+dependencies[] = admin_menu
+dependencies[] = admin_devel
+
+dependencies[] = xhprof
+dependencies[] = schema
+dependencies[] = features
+dependencies[] = ctools
+
+; For coder dependency
+dependencies[] = grammar_parser
+
+; Themes
+; dependencies[] = clean
+
+files[] = drupal_developer.profile
+
+; Information added by drupal.org packaging script on 2013-10-12
+version = "7.x-1.4"
+core = "7.x"
+project = "drupal_developer"
+datestamp = "1381558284"
+

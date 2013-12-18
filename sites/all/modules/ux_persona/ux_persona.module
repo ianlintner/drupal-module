@@ -1,0 +1,42 @@
+<?php
+/* $Id$ */
+/**
+ * @file
+ * Very simple DRUPAL module
+ */
+/**
+ * Implementation of hook_help().
+ */
+function ux_persona_help($section) {
+  switch ($section) {
+    case 'admin/help#hello_world':
+      $output = '<p>Hello world help...</p>';
+      return $output;
+    case 'admin/modules#description':
+      return 'Hello world module description...';
+  }
+}
+/**
+ * Implementation of hook_menu().
+ */
+function ux_persona_menu() {
+
+  // This is the minimum information you can provide for a menu item. This menu
+  // item will be created in the default menu, usually Navigation.
+  $items['examples/page'] = array(
+    'title' => 'Page Example',
+    'page callback' => 'ux_persona_page',
+    'access callback' => TRUE,
+    'expanded' => TRUE,
+  );
+  return $items;
+}
+
+/**
+ * Function which generate page (this generate any content - you need only your own code...)
+ */
+function ux_persona_page() {
+  return array('#markup' => '<p>' . t('Simple page: The quick brown fox jumps over the lazy dog.') . '</p>');
+
+}
+?>
